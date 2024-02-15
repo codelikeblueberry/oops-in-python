@@ -1,0 +1,55 @@
+q. Unpack a list [1,2,3,4,5,6,7,8,9] with the first and last element in a,b variable and 
+remaining list in other variable c
+
+@FUNCTION OVERLOADING:
+
+In Python, unlike some other programming languages,
+the concept of function overloading is not directly supported. 
+When you define a function with a particular name, subsequent definitions 
+with the same name will overwrite the previous ones, regardless of the number
+or types of parameters.
+But it is achievale in java
+
+@ * AND ** operators
+IMPORTANT {
+    * (asterick) is an unpacking operator that is used to unpack the iterable objects
+    (objects that can be looped over with for loop called iterable objects) 
+such as lists, tuples, strings, etc…
+    
+}
+
+
+
+Used as *args or *parameters (arguments):
+
+It allows a function to accept any number of positional arguments.
+The *args syntax collects additional positional arguments into a tuple.
+You can name it anything you like, but the *args convention is widely used.
+
+def example_function(*args):
+    for arg in args:
+        print(arg)
+
+example_function(1, 2, 3, 4)
+# Output:
+# 1
+# 2
+# 3
+# 4
+
+Used as **kwargs or **keyvalues (keyword arguments):
+
+It allows a function to accept any number of keyword arguments.
+The **kwargs syntax collects additional keyword arguments into a dictionary.
+Like *args, you can use any variable name, but **kwargs is a common convention.
+
+def example_function(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+example_function(name="Alice", age=30, city="Wonderland")
+# Output:
+# name: Alice
+# age: 30
+# city: Wonderland
+

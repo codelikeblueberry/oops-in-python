@@ -1,0 +1,45 @@
+q. write a decorator that increases the number of parameters is takes
+and addds them all.
+
+def add_parameters_decorator(func):
+    def wrapper(a, b, c, d):
+        result = func(a, b)
+        return f"The sum of four numbers is {result + c + d}"
+    
+    return wrapper
+
+# Applying the decorator to the original function
+@add_parameters_decorator
+def function(a, b):
+    return a + b
+
+# Example usage
+result = function(2, 3, 4, 5)
+print(result)
+
+Here you can see it cannot override that function but only adds new functionality to it.
+
+q.write a function that adds two numbers. make a decorator that takes three numbers and adds
+them all.
+
+def function(a,b):
+    return a+b # result 1
+
+def other_function(func): # decorator
+    def modified_func(a,b,c):
+        funct = func(a,b) + c # here the new parameter is introduced and modified the result
+        return f"The sum of two numbers is {funct}" # result 2
+    return modified_func
+
+q. How to use the above decorated function?
+
+def other_function(func): # decorator
+    def modified_func(a,b,c):
+        funct = func(a,b) + c # here the new parameter is introduced and modified the result
+        return f"The sum of two numbers is {funct}" # result 2
+    return modified_func
+@other_function
+def function(a,b):
+    return a+b # result 1
+
+print(function(100,100,100)) #jab tumne isko decorate kar diya tha ye 3 arguments lene laga

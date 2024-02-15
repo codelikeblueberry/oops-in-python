@@ -1,0 +1,20 @@
+local variables are those variables which are having scope only inside the function:
+gloabal variables that are declared outside the function and having scope to all functions and nested function.
+If you declared the global variable before calling it then it will not throw error.
+
+q. write a function that return a function which sum all the given parameters of integers.
+i=0
+def function():   
+    def sum_func():
+        global i
+        for j in range(10):
+            i = i+j
+        return i
+    return function
+
+func = function() # returns a sum_function which is assigned to func
+func() # calling func variable
+        
+# work of global keyword 
+# 1. Resist to make the global assigned varibale in the scope instead it tells that please global
+# globally and take that variable
