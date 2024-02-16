@@ -1,0 +1,23 @@
+Q. Tell me what will be the output of print(item1.bill)? What are bound methods?
+
+class Item:
+    def bill(self):
+        # Your implementation of the bill method goes here
+        return "This is the bill."
+
+item1 = Item()
+
+A. output : <bound method Item.bill of <__main__.Item object at 0x0000029790373EE0>>
+
+Q. What are scipts, modules and packages?
+
+A. scripts are Python files intended to be executed to produce output,
+ while modules are Python files designed to be imported without generating any output.
+ package is a collection of modules that work together to achieve a common goal or functionality.
+ library is a collection of modules and packages
+
+Q. What is interpreter and where it is located and how does it work in different os?
+Q. What is __main__.py file?
+Q. what is "where command"?
+
+Q. What are iterators?

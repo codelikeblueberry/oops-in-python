@@ -1,0 +1,8 @@
+ Q. Given this dictionary fruits = {'apple':1,'banana':2,'pear':3}.
+ calculate the total number of fruits.
+
+A. Use the sum function which takes iterables as an object and loops them
+over to find the sum.
+
+iterable_object = fruits.values()
+total_fruits = sum(iterable_object)
