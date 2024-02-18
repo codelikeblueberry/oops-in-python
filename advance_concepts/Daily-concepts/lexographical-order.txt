@@ -1,0 +1,30 @@
+
+Q. we have given this list 'l' remove the duplicates now
+l = ['a','b','a','c','b','a','d','e','e']
+
+A.
+l = ['a','b','a','c','b','a','d','e','e']
+#l = [1,2,1,3,2,1]
+m =[]
+for item in l:
+    if item not in m:
+        m.append(item)
+print(m)
+
+# SHORTCUT
+print(list(set(l)))
+print(set(l))
+# I can convert them into set since set don't have duplicates so it will ultimately removed but the order will not be maintained
+
+# SHORTCUT 2
+
+# Since dictionaries have all the keys unique so
+
+new = list(dict.fromkeys(l).keys())
+print(new)
+
+In Python 3.7 and later versions, the built-in set type preserves the order of elements as they are inserted into the set. This behavior is an implementation detail of the CPython interpreter (the reference implementation of Python) and was officially guaranteed to be part of the language specification starting from Python 3.7.
+
+So, when you create a set from a list like l = [1, 2, 1, 3, 2, 1], the set will maintain the order of elements because Python guarantees it.
+
+However, when you create a set from a list like l = ['a', 'b', 'a', 'c', 'b', 'a'], the order might not be maintained. The reason for this is that while numeric values have a well-defined order, the order of strings is based on their lexicographical (dictionary) order. In this case, the elements in the set are still unique, but their order is determined by the underlying hash values of the strings, not the order in which they were inserted.

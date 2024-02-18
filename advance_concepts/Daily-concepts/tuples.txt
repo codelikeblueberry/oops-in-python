@@ -1,0 +1,12 @@
+Suppose i have a tuple => 
+t = (1,2)
+can i change it NO!
+BUT IF
+t ={[1,2],[1,2,3]}
+can i change the list inside the tuple => YES!
+
+Then what do you actually mean by immutable?
+I actually meant by that you cannot change the addesses of data inside tuple.
+Here as the memory addess in the tuple is same for both list, the tuple is thinking it is still unchanged.
+
+Q. Can You change values of tup = ([1,2],[1,2,3,4]) ? If yes why what do you mean by immutability of the tuple.
